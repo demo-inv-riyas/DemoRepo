@@ -1,0 +1,12 @@
+1- Copy the cirtificate(MM_Authenticode_CodeSigning_20220511.pfx) to buildoutput
+2- Add this cirtificate to Addin.QuickCrossApp,Addin and QuickCross-Setup in Sign in section (choose "From file" option)
+3- Import this cirtificate into Trusted publisher (steps is given below)
+     A- Open run command
+     B- Type certmgr.msc
+     c- Select Trusted publishe/Cirtificate
+     d- righ click alltask-> import
+     E- Export to D:\qc4-phase2\src\QuickCross\QuickCROSS-Setup\Resources this as .CER file after import(Double click the added cirtificate and Select Copy to file)
+   **ALSO WE CAN IMPORT THE CIRTIFICATE BY DOUBLE CLICK**
+
+4- Change file name and password from Codesigning.bat in Buildoutput
+5- Change the certificate in visual studio from resources.rsx file in quickCross-setup
