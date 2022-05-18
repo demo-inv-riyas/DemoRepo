@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using trial.Model;
 
 namespace trial
 {
@@ -17,9 +14,35 @@ namespace trial
             Console.WriteLine("hiiiiiiiiiiiii inbtwn");
             Console.WriteLine("Riyas Final commit for history review!");
             Console.WriteLine("sudeep commit for history review!");
+            SumofTwoNumber sumofTwoNumber = new SumofTwoNumber();
+            sumofTwoNumber
+                .AddTwoNumbers(2, 5)
+                .AddTwoNumbers(5, 8).AddTwoNumbers(1, 1);
+            Console.WriteLine(sumofTwoNumber.ToString());
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
+
     }
+
+    public class SumofTwoNumber
+    {
+        SumValueModel sumValueModel = new SumValueModel();
+        public SumofTwoNumber()
+        {
+
+        }
+        public SumofTwoNumber AddTwoNumbers(double a, double b)
+        {
+            sumValueModel.FirstNumber = a;
+            sumValueModel.SecondNumber = b;
+            return this;
+        }
+        public override string ToString()
+        {
+            return sumValueModel.ToString();
+        }
+    }
+
 }
